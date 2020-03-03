@@ -1,0 +1,25 @@
+void printPatt(int n)
+{
+ int i,j,l,k;
+    for(i=0;i<=n;i++)
+    {
+        for(j=n;j>i;j--)
+        {
+            printf(" ");
+        }
+    for(k=i;k>=0;k--)
+    {
+        printf("%d",k);
+    }
+    if(i!=0)
+    {
+        for(l=1;l<=i;l++)
+        {
+            printf("%d",l);
+        }
+    }
+    printf("\n");
+    }
+    
+  
+}
