@@ -1,0 +1,18 @@
+void printPatt(int n)
+{
+    int i,j,k,num=n;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<i;j++)
+        {
+            printf("%d",num);
+            num++;
+        
+        }num=num-i;
+        for(k=n;k>=i;k--)
+        {
+            printf("%d",n);
+        }
+     printf("\n");
+    }
+}
