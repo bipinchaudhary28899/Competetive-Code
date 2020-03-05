@@ -1,0 +1,44 @@
+void printPatt(int n)
+{
+   int i,k,j,l,num=n,num1=n,num2;
+    for(i=n;i>=1;i--)
+   { int num2=i+1,num1=n;
+       for(j=i;j<n;j++)
+       {
+           printf("%d",num1);
+           num1--;
+       }
+       for(k=2*i-1;k>0;k--)
+       {
+           printf("%d",num);
+       }num--;
+       
+       for(l=n;l>i;l--)
+       {
+           printf("%d",num2);
+           num2++;
+       }
+        printf("\n"); 
+   }
+  
+       num=2;num1=n;num2=2;
+       for(i=2;i<=n;i++)
+   {
+        num2=i+1; 
+           for(j=i;j<n;j++)
+       {
+           printf("%d",num1);
+           num1--;
+       }num1=n;
+       for(k=2*i-1;k>0;k--)
+       {
+           printf("%d",num);
+       }num++;
+         for(l=i;l<n;l++)
+       {
+           printf("%d",num2);
+            num2++;  
+       }
+   printf("\n"); 
+   }
+}
