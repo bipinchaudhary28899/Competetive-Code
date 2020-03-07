@@ -1,0 +1,30 @@
+void printPatt(int n)
+{
+int i,j,k,l;
+for(i=0;i<n;i++)
+printf("*");
+printf("\n");
+for(i=1;i<n/2;i++)
+{
+ for(j=n/2;j>=i;j--)
+ printf("*");
+
+for(k=1;k<=2*i-1;k++)
+ printf(" ");
+for(l=n/2;l>=i;l--)
+printf("*");
+printf("\n");
+}
+for(i=n/2;i>0;i--)
+ {
+ for(j=n/2;j>=i;j--)
+ printf("*");
+ for(k=2*i-1;k>0;k--)
+ printf(" ");
+ for(l=n/2;l>=i;l--)
+ printf("*");
+ printf("\n");
+ }
+for(i=0;i<n;i++)
+printf("*");
+}
