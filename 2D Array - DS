@@ -1,0 +1,72 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Complete the hourglassSum function below.
+int hourglassSum(vector<vector<int>> arr) {
+int sum1=arr[0][0]+arr[0][1]+arr[0][2]+arr[1][1]+arr[2][0]+arr[2][1]+arr[2][2];
+int sum2=arr[0][1]+arr[0][2]+arr[0][3]+arr[1][2]+arr[2][1]+arr[2][2]+arr[2][3];
+int sum3=arr[0][2]+arr[0][3]+arr[0][4]+arr[1][3]+arr[2][2]+arr[2][3]+arr[2][4];
+int sum4=arr[0][3]+arr[0][4]+arr[0][5]+arr[1][4]+arr[2][3]+arr[2][4]+arr[2][5];
+
+int sum5=arr[1][0]+arr[1][1]+arr[1][2]+arr[2][1]+arr[3][0]+arr[3][1]+arr[3][2];
+int sum6=arr[1][1]+arr[1][2]+arr[1][3]+arr[2][2]+arr[3][1]+arr[3][2]+arr[3][3];
+int sum7=arr[1][2]+arr[1][3]+arr[1][4]+arr[2][3]+arr[3][2]+arr[3][3]+arr[3][4];
+int sum8=arr[1][3]+arr[1][4]+arr[1][5]+arr[2][4]+arr[3][3]+arr[3][4]+arr[3][5];
+
+int sum9=arr[2][0]+arr[2][1]+arr[2][2]+arr[3][1]+arr[4][0]+arr[4][1]+arr[4][2];
+int sum10=arr[2][1]+arr[2][2]+arr[2][3]+arr[3][2]+arr[4][1]+arr[4][2]+arr[4][3];
+int sum11=arr[2][2]+arr[2][3]+arr[2][4]+arr[3][3]+arr[4][2]+arr[4][3]+arr[4][4];
+int sum12=arr[2][3]+arr[2][4]+arr[2][5]+arr[3][4]+arr[4][3]+arr[4][4]+arr[4][5];
+
+int sum13=arr[3][0]+arr[3][1]+arr[3][2]+arr[4][1]+arr[5][0]+arr[5][1]+arr[5][2];
+int sum14=arr[3][1]+arr[3][2]+arr[3][3]+arr[4][2]+arr[5][1]+arr[5][2]+arr[5][3];
+int sum15=arr[3][2]+arr[3][3]+arr[3][4]+arr[4][3]+arr[5][2]+arr[5][3]+arr[5][4];
+int sum16=arr[3][3]+arr[3][4]+arr[3][5]+arr[4][4]+arr[5][3]+arr[5][4]+arr[5][5];
+
+int a=max(sum1,sum2);
+int b=max(sum3,sum4);
+int c=max(sum6,sum5);
+int d=max(sum7,sum8);
+int e=max(sum10,sum9);
+int f=max(sum11,sum12);
+int g=max(sum13,sum14);
+int h=max(sum15,sum16);
+
+int i=max(a,b);
+int j=max(c,d);
+int k=max(e,f);
+int l=max(g,h);
+
+int m=max(i,j);
+int n=max(k,l);
+
+return max(m,n);
+
+
+
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    vector<vector<int>> arr(6);
+    for (int i = 0; i < 6; i++) {
+        arr[i].resize(6);
+
+        for (int j = 0; j < 6; j++) {
+            cin >> arr[i][j];
+        }
+
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    int result = hourglassSum(arr);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
